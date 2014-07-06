@@ -1,12 +1,15 @@
-Unchained
+Unchained - (experimental fork)
 =========
 
-Common helper functions to help Django break free
+Experiments with common helper functions to help Django break free. 
+Get the real version of  Unchained at Aychedee's repo here : 
+https://github.com/aychedee/unchained
 
 Install
 =======
+To install (the real thing), use this command :
 
-    pip install https://github.com/aychedee/unchained.git
+    pip install git+https://github.com/aychedee/unchained.git
 
 
 Usage
