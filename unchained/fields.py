@@ -132,3 +132,15 @@ class JSONField(six.with_metaclass(models.SubfieldBase, models.TextField)):
         if isinstance(value, JSON.JsonString):
             return json.dumps(value)
         return value
+
+# introspection rules to be compatible with south
+try :
+    import south
+    has_south = True
+except ImportError:
+    has_south = False
+    south = None
+
+if has_south and south:
+    from south.modelsinspector import add_introspection_rules
+    add_introspection_rules([], ['^unchained\.fields\.JSONField'])
